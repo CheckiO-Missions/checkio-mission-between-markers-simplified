@@ -1,21 +1,18 @@
-"use strict";
+import assert from "assert";
 
-function betweenMarkers(text, begin, end) {
-    // returns substring between two given markers
-
+function betweenMarkers(line: string, left: string, right: string): string {
     // your code here
-    return 0;
+    return '';
 }
 
-var assert = require('assert');
+console.log('Example:');
+console.log(betweenMarkers('What is >apple<', '>', '<'));
 
-if (!global.is_checking) {
-    console.log('Example:')
-    console.log(betweenMarkers('What is >apple<', '>', '<'), 'apple')
+// These "asserts" are used for self-checking
+assert.equal(betweenMarkers('What is >apple<', '>', '<'), 'apple');
+assert.equal(betweenMarkers('What is [apple]', '[', ']'), 'apple');
+assert.equal(betweenMarkers('What is ><', '>', '<'), '');
+assert.equal(betweenMarkers('[an apple]', '[', ']'), 'an apple');
 
-    assert.equal(betweenMarkers('What is >apple<', '>', '<'), 'apple')
-    assert.equal(betweenMarkers('What is [apple]', '[', ']'), 'apple')
-    assert.equal(betweenMarkers('What is ><', '>', '<'), '')
-    assert.equal(betweenMarkers('>apple<', '>', '<'), 'apple')
-    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
-}
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
+    

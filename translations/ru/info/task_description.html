@@ -26,6 +26,9 @@
 
 {% if interpreter.slug == "js-node" %}
 <pre class="brush: javascript">betweenMarkers('What is >apple<', '>', '<') == 'apple'
+betweenMarkers('What is [apple]', '[', ']') == 'apple'
+betweenMarkers('What is ><', '>', '<') == ''
+betweenMarkers('[an apple]', '[', ']') == 'an apple'
 </pre>
 {% else %}
 <pre class="brush: python">between_markers('What is >apple<', '>', '<') == 'apple'
