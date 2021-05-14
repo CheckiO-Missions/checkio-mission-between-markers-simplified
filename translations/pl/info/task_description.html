@@ -1,0 +1,48 @@
+<p>
+    Dany jest string oraz dwa znaczniki: początkowy i końcowy. Twoim zadaniem jest znalezienie substringa zawartego pomiędzy tymi dwoma znacznikami.
+</p>
+
+<p>To jest uproszczona wersja misji <a href="/mission/between-markers/">Between Markers</a>.</p>
+
+<ul>
+	<li>Znacznik początkowy i końcowy różnią się.</li>
+	<li>Znacznik początkowy i końcowy są długości jednego znaku.</li>
+	<li>Znacznik początkowy i końcowy zawsze występują w stringu w kolejności końcowy po początkowym.</li>
+</ul>
+
+<p>
+    <strong>Wejście: </strong> Trzy argumenty. Wszystkie są typu string. Drugi i trzeci argument to znacznik początkowy i końcowy.
+</p>
+
+<p>
+    <strong>Wyjście: </strong> String. 
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Przykład:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">betweenMarkers('What is >apple<', '>', '<') == 'apple'
+betweenMarkers('What is [apple]', '[', ']') == 'apple'
+betweenMarkers('What is ><', '>', '<') == ''
+betweenMarkers('[an apple]', '[', ']') == 'an apple'
+</pre>
+{% else %}
+<pre class="brush: python">between_markers('What is >apple<', '>', '<') == 'apple'
+</pre>
+{% endif %}
+</div>
+
+<p class="for_info_only">
+    <strong>Do czego jest używane: </strong>
+    <i>parsowanie tekstu.</i>
+</p>
+
+<p>
+    <strong>Warunek wstępny:</strong>
+    <i>W tekście nie może znajdować się więcej niż jeden znacznik początkowy i jeden końcowy.</i>
+</p>
