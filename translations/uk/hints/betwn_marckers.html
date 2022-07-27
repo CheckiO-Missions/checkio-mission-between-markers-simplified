@@ -1,0 +1,50 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        Я не можу зрозуміти, з чого мені розпочати?
+    </div>
+    <div class="answer">
+        <p>Перш за все, почитай про методи для об'єктів типу "string" - <a href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str" target="_blank"> "String Methods"</a></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я все ще не розумію...
+    </div>
+    <div class="answer">
+        <p>Зверни свою увагу на "str.index" метод. Якщо ти відкриєш свою python консоль та впишеш "txt = "Hello, welcome."", а потім виконаєш наступне "txt.index("w")", то ти отримаєш у відповідь "7", тому що літера "w" знаходиться на 7-мій позиції у рядку (рахувати починаэмо з "0").</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Добре. Як мені використати це для вирішеня місії?
+    </div>
+    <div class="answer">
+        <p>Твій початковий код має наступний вигляд:</p>
+        <pre class="brush: python">
+def between_markers(text:str, begin:str, end:str) -> str:
+    # your code here
+    return None
+        </pre>
+        <p>де "text" твоя перша змінна, яка являє собою рядок. Друга та третя змінна - початковий та кінцевий маркери. Отже, просто зроби наступне:</p>
+        <pre class="brush: python">
+text.index(begin)
+text.index(end)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Хм, окей. Але як все ж таки повинен виглядати мій фінальний код?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def string_length(text: str) -> int:
+    # your code here
+    return text[text.index(begin)+1:text.index(end)]
+        </pre>
+    </div>
+</div>
+
+
+</body>
