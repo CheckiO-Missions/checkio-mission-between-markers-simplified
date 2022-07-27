@@ -1,0 +1,50 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission...
+    </div>
+    <div class="answer">
+        <p>First of all, read some information about string methods - <a href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str" target="_blank"> "String Methods"</a></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I still can't understand...
+    </div>
+    <div class="answer">
+        <p>Pay your attention to "str.index" method. So if you open your python console and say "txt = "Hello, welcome."" and than you use the "txt.index("w")", you should get 7, because the letter "w" is in the 7th position.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok. How can I use it in solution then?
+    </div>
+    <div class="answer">
+        <p>Your start code should look like this</p>
+        <pre class="brush: python">
+def between_markers(text:str, begin:str, end:str) -> str:
+    # your code here
+    return None
+        </pre>
+        <p>which means inside of the variable "text" you have the first variable, which is the string. The second and third variables are the initial and final markers. So just do the following..</p>
+        <pre class="brush: python">
+text.index(begin)
+text.index(end)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        One last question. How my final solution will look like?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def string_length(text: str) -> int:
+    # your code here
+    return text[text.index(begin)+1:text.index(end)]
+        </pre>
+    </div>
+</div>
+
+
+</body>
