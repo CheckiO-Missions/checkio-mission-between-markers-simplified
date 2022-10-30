@@ -1,0 +1,97 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <i>I have no idea how to start solving this mission.</i>
+    </div>
+    <div class="answer">
+        <p>
+            💡 You need to find two indexes (of left marker and right marker) and substring between them.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Ok, what should I start from?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Find the index of start a substring or single character in another string with <a target="_blank" href="https://www.w3schools.com/jsref/jsref_indexof.asp">string.indexOf()</a> method. Do it two times - for left and right markers.
+        </p>
+        <pre class="brush: javascript">
+let start = line.indexOf(left);
+let end =  line.indexOf(right);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Ok, how to find the text between those markers?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Use <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a> method to get substring. Note, you should add the length of left marker (in this case 1) and the end position of slice is not included. It's exactly what you need.
+        </p>
+        <pre class="brush: javascript">
+line.slice(start + 1, end);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>So, how my final solution should look like?</i>
+    </div>
+    <div class="answer">
+        <p>
+            You just need to wrap your code into function expression and return the substring you've got. 
+        </p>
+        <p>Here is the whole solution:</p>
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+
+    let start = line.indexOf(left);
+    let end =  line.indexOf(right);
+    
+    return line.slice(start + 1, end);
+}
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Show me more solutions!<br />
+        'Cause I wanna be a real 🥇 Javascript Hero!</i>
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+             You split the line two times - by left marker (and take second half), then by right marker (and take first half). Also, anonymous function is used in this solution.
+        </p>
+        <pre class="brush: javascript">
+var betweenMarkers = (s: string, l: string, r: string): string =>
+s.split(l)[1].split(r)[0];
+        </pre>
+        <p>
+            This solution uses regular expression to find specific pattern inside line, and ternary operator.
+        </p>
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+    
+    let result = line.match(new RegExp(`\\${left}(.*?)\\${right}`));
+
+    return result ? result[1] : '';
+}
+        </pre>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Thanks! I know and understand more now! Everything works fine!</i>
+    </div>
+    <div class="answer">
+        👍 Glad to hear it!
+    </div>
+</div>
+</body>
