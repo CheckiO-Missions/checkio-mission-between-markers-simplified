@@ -1,32 +1,46 @@
 <body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        Я не можу зрозуміти, з чого мені розпочати?
+        <p>
+            Я не можу зрозуміти, з чого мені розпочати?
+        </p>
     </div>
     <div class="answer">
-        <p>Перш за все, почитай про методи для об'єктів типу "string" - <a href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str" target="_blank"> "String Methods"</a></p>
+        <p>
+            Перш за все, почитай про методи для об'єктів типу "string" - <a href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str" target="_blank">String Methods</a>
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Я все ще не розумію...
+        <p>
+            Я все ще не розумію...
+        </p>
     </div>
     <div class="answer">
-        <p>Зверни свою увагу на "str.index" метод. Якщо ти відкриєш свою python консоль та впишеш "txt = "Hello, welcome."", а потім виконаєш наступне "txt.index("w")", то ти отримаєш у відповідь "7", тому що літера "w" знаходиться на 7-мій позиції у рядку (рахувати починаэмо з "0").</p>
+        <p>
+            Зверни свою увагу на <b class="code">str.index</b> метод. Якщо ти відкриєш свою python консоль та впишеш <b class="code">txt = "Hello, welcome."</b>, а потім виконаєш наступне <b class="code">txt.index("w")</b>, то ти отримаєш у відповідь <b class="code">7</b>, тому що літера <b class="code">"w"</b> знаходиться на 7-й позиції у рядку (рахувати починаємо з "0").
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Добре. Як мені використати це для вирішеня місії?
+        <p>
+            Добре. Як мені використати це для вирішення місії?
+        </p>
     </div>
     <div class="answer">
-        <p>Твій початковий код має наступний вигляд:</p>
+        <p>
+            Твій початковий код має наступний вигляд:
+        </p>
         <pre class="brush: python">
 def between_markers(text:str, begin:str, end:str) -> str:
     # your code here
     return None
         </pre>
-        <p>де "text" твоя перша змінна, яка являє собою рядок. Друга та третя змінна - початковий та кінцевий маркери. Отже, просто зроби наступне:</p>
+        <p>
+            де <b class="code">text</b> твоя перша змінна, яка являє собою рядок. Друга та третя змінна - початковий та кінцевий маркери. Отже, просто зроби наступне:
+        </p>
         <pre class="brush: python">
 text.index(begin)
 text.index(end)
@@ -35,16 +49,16 @@ text.index(end)
 </div>
 <div class="question-answer">
     <div class="question">
-        Хм, окей. Але як все ж таки повинен виглядати мій фінальний код?
+        <p>
+            Хм, окей. Але як все ж таки повинен виглядати мій фінальний код?
+        </p>
     </div>
     <div class="answer">
         <pre class="brush: python">
 def string_length(text: str) -> int:
-    # your code here
+
     return text[text.index(begin)+1:text.index(end)]
         </pre>
     </div>
 </div>
-
-
 </body>
