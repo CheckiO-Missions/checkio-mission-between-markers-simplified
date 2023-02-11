@@ -55,7 +55,7 @@ text.index(end)
     </div>
     <div class="answer">
         <pre class="brush: python">
-def between_markers(text: str) -> int:
+def between_markers(text: str, begin: str, end: str) -> int:
 
     return text[text.index(begin)+1:text.index(end)]
         </pre>
