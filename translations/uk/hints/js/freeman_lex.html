@@ -47,6 +47,7 @@ line.slice(start + 1, end);
             Тобі просто потрібно обгорнути свій код у вираз функції та повернути підрядок, який ти отримав.
         </p>
         <p>Ось повне рішення:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function betweenMarkers(line: string, left: string, right: string): string {
 
@@ -56,6 +57,7 @@ function betweenMarkers(line: string, left: string, right: string): string {
     return line.slice(start + 1, end);
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -68,13 +70,16 @@ function betweenMarkers(line: string, left: string, right: string): string {
         <p>
             Ти розділив рядок двічі - лівим маркером (і береш другу половину), потім правим маркером (і візьми першу половину). Також, у цьому рішенні використовується анонімна функція. 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 var betweenMarkers = (s: string, l: string, r: string): string =>
 s.split(l)[1].split(r)[0];
         </pre>
+        </div>
         <p>
             Це рішення використовує регулярний вираз для пошуку конкретної схеми всередині рядка, та потрійний оператор.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function betweenMarkers(line: string, left: string, right: string): string {
     
@@ -83,6 +88,7 @@ function betweenMarkers(line: string, left: string, right: string): string {
     return result ? result[1] : '';
 }
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>
