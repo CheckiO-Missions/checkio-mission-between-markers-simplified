@@ -47,6 +47,7 @@ line.slice(start + 1, end);
             You just need to wrap your code into function expression and return the substring you've got. 
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function betweenMarkers(line: string, left: string, right: string): string {
 
@@ -56,6 +57,7 @@ function betweenMarkers(line: string, left: string, right: string): string {
     return line.slice(start + 1, end);
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -68,13 +70,16 @@ function betweenMarkers(line: string, left: string, right: string): string {
         <p>
              You split the line two times - by left marker (and take second half), then by right marker (and take first half). Also, anonymous function is used in this solution.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 var betweenMarkers = (s: string, l: string, r: string): string =>
 s.split(l)[1].split(r)[0];
         </pre>
+        </div>
         <p>
             This solution uses regular expression to find specific pattern inside line, and ternary operator.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function betweenMarkers(line: string, left: string, right: string): string {
     
@@ -83,6 +88,7 @@ function betweenMarkers(line: string, left: string, right: string): string {
     return result ? result[1] : '';
 }
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
