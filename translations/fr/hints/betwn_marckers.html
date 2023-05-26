@@ -1,0 +1,66 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je n'ai aucune idée de la façon de résoudre cette mission...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Tout d'abord, lisez quelques informations sur les méthodes de chaînes de caractères - <a href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str" target="_blank">Méthodes de chaînes de caractères</a>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je ne comprends toujours pas...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Faites attention à la méthode <b class="code">str.index</b>. Si vous ouvrez votre console python et dites <b class="code">txt = "Hello, welcome."</b> et que vous utilisez la méthode <b class="code">txt.index("w")</b>, vous obtenez <b class="code">7</b>, parce que la lettre <b class="code">"w"</b> est en 7ème position.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            D'accord. Comment puis-je l'utiliser dans la solution alors?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Votre code de départ devrait ressembler à ceci
+        </p>
+        <pre class="brush: python">
+def between_markers(text:str, begin:str, end:str) -> str:
+    # your code here
+    return ""
+        </pre>
+        <p>
+            ce qui signifie que la valeur de la variable <b class="code">texte</b> est une chaîne de caractères. Les deuxième et troisième variables sont les marqueurs initiaux et finaux. Il vous suffit donc de faire ce qui suit...
+        </p>
+        <pre class="brush: python">
+text.index(begin)
+text.index(end)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Une dernière question. À quoi ressemblera ma solution finale?
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def between_markers(text: str, begin: str, end: str) -> int:
+
+    return text[text.index(begin)+1:text.index(end)]
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
