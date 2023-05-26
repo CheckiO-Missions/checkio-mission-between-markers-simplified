@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Je n'ai aucune idée de la manière de commencer à résoudre cette mission.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Vous devez trouver deux index (du marqueur gauche et du marqueur droit) et la sous-chaîne entre eux.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, par quoi dois-je commencer?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Trouvez l'indice de début d'une sous-chaîne ou d'un caractère unique dans une autre chaîne avec la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_indexof.asp">string.indexOf()</a>. Faites-le deux fois - pour les marqueurs gauche et droit.
+        </p>
+        <pre class="brush: javascript">
+let start = line.indexOf(left);
+let end =  line.indexOf(right);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, comment trouver le texte entre ces marqueurs?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Utilisez la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a> pour obtenir une sous-chaîne. Notez que vous devez ajouter la longueur du marqueur de gauche (dans ce cas 1) et que la position finale de la tranche n'est pas incluse. C'est exactement ce dont vous avez besoin.
+        </p>
+        <pre class="brush: javascript">
+line.slice(start + 1, end);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Alors, à quoi devrait ressembler ma solution finale?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Il vous suffit d'insérer votre code dans une expression de fonction et de renvoyer la sous-chaîne que vous avez obtenue. 
+        </p>
+        <p>Voici la solution complète:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+
+    let start = line.indexOf(left);
+    let end =  line.indexOf(right);
+    
+    return line.slice(start + 1, end);
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Montrez-moi d'autres solutions!<br />
+        parce que je veux être un vrai 🥇 Javascript Hero!</p>
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le!</p>
+        <p>
+             Vous divisez la ligne deux fois - par le marqueur de gauche (et prenez la deuxième moitié), puis par le marqueur de droite (et prenez la première moitié). De plus, une fonction anonyme est utilisée dans cette solution.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var betweenMarkers = (s: string, l: string, r: string): string =>
+s.split(l)[1].split(r)[0];
+        </pre>
+        </div>
+        <p>
+            Cette solution utilise l'expression régulière pour trouver un motif spécifique à l'intérieur de la ligne, et l'opérateur ternaire.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+    
+    let result = line.match(new RegExp(`\\${left}(.*?)\\${right}`));
+
+    return result? result[1]: '';
+}
+        </pre>
+        </div>
+        <p><b>Cliquez sur "Meilleures solutions" dans le menu de la mission et découvrez de nombreuses autres solutions intéressantes!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Merci beaucoup! Je comprends mieux maintenant! Tout fonctionne bien!</p>
+    </div>
+    <div class="answer">
+        👍 Heureux de l'apprendre!
+    </div>
+</div>
+</body>
