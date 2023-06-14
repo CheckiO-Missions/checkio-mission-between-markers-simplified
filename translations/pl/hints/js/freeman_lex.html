@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            musi Pan znaleźć dwa indeksy (lewego i prawego znacznika) i podciąg między nimi.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, od czego powinienem zacząć?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę znaleźć indeks początku podciągu lub pojedynczego znaku w innym ciągu za pomocą metody <a target="_blank" href="https://www.w3schools.com/jsref/jsref_indexof.asp">string.indexOf()</a>. Proszę to zrobić dwa razy - dla lewego i prawego znacznika.
+        </p>
+        <pre class="brush: javascript">
+let start = line.indexOf(left);
+let end =  line.indexOf(right);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, jak znaleźć tekst pomiędzy tymi znacznikami?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę użyć metody <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a>, aby uzyskać podciąg. Proszę zauważyć, że należy dodać długość lewego znacznika (w tym przypadku 1), a pozycja końcowa wycinka nie jest uwzględniana. To jest dokładnie to, czego Pan potrzebuje.
+        </p>
+        <pre class="brush: javascript">
+line.slice(start + 1, end);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak więc powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Wystarczy zawinąć kod w wyrażenie funkcyjne i zwrócić otrzymany podciąg. 
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+
+    let start = line.indexOf(left);
+    let end =  line.indexOf(right);
+    
+    return line.slice(start + 1, end);
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 bohaterem Javascriptu!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę pobrać!</p>
+        <p>
+             Proszę podzielić linię dwa razy - przez lewy znacznik (i wziąć drugą połowę), a następnie przez prawy znacznik (i wziąć pierwszą połowę). W tym rozwiązaniu używana jest również funkcja anonimowa.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var betweenMarkers = (s: string, l: string, r: string): string =>
+s.split(l)[1].split(r)[0];
+        </pre>
+        </div>
+        <p>
+            To rozwiązanie wykorzystuje wyrażenie regularne do znalezienia określonego wzorca wewnątrz linii oraz operator trójargumentowy.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+    
+    let result = line.match(new RegExp(`\\${left}(.*?)\\${right}`));
+
+    return result? result[1]: '';
+}
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best Solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa dobrze!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>
