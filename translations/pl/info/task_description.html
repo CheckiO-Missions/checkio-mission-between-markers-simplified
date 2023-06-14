@@ -1,37 +1,37 @@
 <p>
-    Dany jest string oraz dwa znaczniki: początkowy i końcowy. Twoim zadaniem jest znalezienie substringa zawartego pomiędzy tymi dwoma znacznikami.
+    Otrzymują Państwo ciąg znaków i dwa znaczniki (początkowy i końcowy). Musi Pan znaleźć podciąg zawarty między tymi dwoma znacznikami. Jest jednak kilka ważnych warunków.
 </p>
 
 <ul>
-	<li>Znacznik początkowy i końcowy różnią się.</li>
-	<li>Znacznik początkowy i końcowy są długości jednego znaku.</li>
-	<li>Znacznik początkowy i końcowy zawsze występują w stringu w kolejności końcowy po początkowym.</li>
+	<li>Znaczniki początkowy i końcowy są zawsze różne.</li>
+	<li>Znaczniki początkowy i końcowy mają zawsze rozmiar 1 znaku.</li>
+	<li>Znaczniki początkowy i końcowy zawsze istnieją w ciągu i występują jeden po drugim.</li>
 </ul>
 
 <p>
-    <strong>Wejście: </strong> Trzy argumenty. Wszystkie są typu string. Drugi i trzeci argument to znacznik początkowy i końcowy.
+   <strong>Wejście:</strong> Trzy argumenty. Wszystkie są łańcuchami {% if is_js %}<span>(string)</span> {% else %} <span>(str)</span> {% endif %}. Drugi i trzeci argument to znaczniki początkowy i końcowy.
 </p>
 
 <p>
-    <strong>Wyjście: </strong> String. 
+   <strong>Dane wyjściowe:</strong> Ciąg znaków {% if is_js %}<span>(string)</span> {% else %} <span>(str)</span> {% endif %}. 
 </p>
 
 
 
 <div class="for_info_only">
     <p>
-        <strong>Przykład:</strong>
+        <strong>Przykłady:</strong>
     </p>
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>Do czego jest używane: </strong>
-    <i>parsowanie tekstu.</i>
+    <strong>Jak jest używany:</strong>
+    <i>Do parsowania tekstu.</i>
 </p>
 
 <p>
     <strong>Warunek wstępny:</strong>
-    <i>W tekście nie może znajdować się więcej niż jeden znacznik początkowy i jeden końcowy.</i>
+    <i>Nie może być więcej niż jeden końcowy i jeden początkowy znacznik.</i>
 </p>

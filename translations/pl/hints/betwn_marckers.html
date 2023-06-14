@@ -1,0 +1,66 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie mam pojęcia, jak zacząć rozwiązywać tę misję...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Przede wszystkim proszę poczytać trochę o metodach łańcuchowych - np <a href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str" target="_blank">String Methods</a>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nadal nie rozumiem...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę zwrócić uwagę na metodę <b class="code">str.index</b>. Jeśli więc otworzy Pan konsolę Pythona i powie <b class="code">txt = "Hello, welcome."</b>, a następnie użyje <b class="code">txt.index("w")</b>, otrzyma Pan <b class="code">7</b>, ponieważ litera <b class="code">"w"</b> znajduje się na 7. pozycji.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. Jak mogę użyć tego w rozwiązaniu?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Pana kod startowy powinien wyglądać następująco
+        </p>
+        <pre class="brush: python">
+def between_markers(text:str, begin:str, end:str) -> str:
+    # your code here
+    return ""
+        </pre>
+        <p>
+            co oznacza, że jako wartość zmiennej <b class="code">text</b> mają Państwo ciąg znaków. Druga i trzecia zmienna to znaczniki początkowy i końcowy. Proszę więc wykonać następujące czynności...
+        </p>
+        <pre class="brush: python">
+text.index(begin)
+text.index(end)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ostatnie pytanie. Jak będzie wyglądało moje ostateczne rozwiązanie?
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def between_markers(text: str, begin: str, end: str) -> int:
+
+    return text[text.index(begin)+1:text.index(end)]
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
