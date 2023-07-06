@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务。</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 你需要找到两个索引（左边的标记和右边的标记）和它们之间的子串。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好吧，我应该从什么开始呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            用<a target="_blank" href="https://www.w3schools.com/jsref/jsref_indexof.asp">string.indexOf()</a> 方法找到子串或另一个字符串中单个字符的起始索引。这样做两次--对左标记和右标记。
+        </p>
+        <pre class="brush: javascript">
+let start = line.indexOf(left);
+let end =  line.indexOf(right);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            好的，如何找到这些标记之间的文本？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            使用<a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a> 方法来获取子串。注意，你应该加上左边标记的长度（在本例中为1），并且不包括切片的结束位置。这正是你需要的。
+        </p>
+        <pre class="brush: javascript">
+line.slice(start + 1, end);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>那么，我的最终解决方案应该是什么样子的呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你只需要将你的代码包装成函数表达式，并返回你得到的子串。 
+        </p>
+        <p>下面是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+
+    let start = line.indexOf(left);
+    let end =  line.indexOf(right);
+    
+    return line.slice(start + 1, end);
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>告诉我更多的解决方案!<br />
+        因为我想成为一个真正的🥇Javascript英雄!</p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+             你把这一行分成两部分--左边的标记（取后半部分），然后右边的标记（取前半部分）。另外，在这个解决方案中使用了匿名函数。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var betweenMarkers = (s: string, l: string, r: string): string =>
+s.split(l)[1].split(r)[0];
+        </pre>
+        </div>
+        <p>
+            这个解决方案使用正则表达式来寻找行内的特定模式，并使用三元操作符。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+    
+    let result = line.match(new RegExp(`\\${left}(.*?)\\${right}`));
+
+    return result? result[1]: '';
+}
+        </pre>
+        </div>
+        <p>点击任务菜单上的<b>Best Solutions</b> ，可以看到很多其他有趣的解决方案!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>谢谢!我现在知道并理解了更多!一切工作都很顺利!</p>
+    </div>
+    <div class="answer">
+        👍很高兴听到这个消息!
+    </div>
+</div>
+</body>
