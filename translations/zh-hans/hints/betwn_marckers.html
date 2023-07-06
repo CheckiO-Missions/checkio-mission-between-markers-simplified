@@ -1,0 +1,66 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这个任务......。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            首先，阅读一些关于字符串方法的资料 -<a href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str" target="_blank">String Methods</a>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我还是不明白...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            请注意<b class="code">str.index</b> 方法。因此，如果你打开你的Python控制台，说<b class="code">txt = "Hello, welcome."</b> ，然后比你使用<b class="code">txt.index("w")</b> ，你会得到<b class="code">7</b> ，因为字母<b class="code">"w"</b> 是在第7个位置。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            好的。那我如何在解决方案中使用它呢？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            你的启动代码应该是这样的
+        </p>
+        <pre class="brush: python">
+def between_markers(text:str, begin:str, end:str) -> str:
+    # your code here
+    return ""
+        </pre>
+        <p>
+            这意味着，作为变量<b class="code">text</b> 的值，你有一个字符串。第二个和第三个变量是初始和最终标记。所以只需做以下工作。
+        </p>
+        <pre class="brush: python">
+text.index(begin)
+text.index(end)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            最后一个问题。我的最终解决方案会是什么样子的？
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def between_markers(text: str, begin: str, end: str) -> int:
+
+    return text[text.index(begin)+1:text.index(end)]
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
