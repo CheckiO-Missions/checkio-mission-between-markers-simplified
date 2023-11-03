@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Sie müssen zwei Indizes (der linken und der rechten Markierung) und die Teilzeichenkette zwischen ihnen finden.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, womit soll ich anfangen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Finden Sie den Index für den Beginn einer Teilzeichenkette oder eines einzelnen Zeichens in einer anderen Zeichenkette mit der Methode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_indexof.asp">string.indexOf()</a>. Machen Sie das zweimal - für die linke und die rechte Markierung.
+        </p>
+        <pre class="brush: javascript">
+let start = line.indexOf(left);
+let end =  line.indexOf(right);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, wie findet man den Text zwischen diesen Markierungen?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Verwenden Sie die Methode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a>, um eine Teilzeichenkette zu erhalten. Beachten Sie, dass Sie die Länge der linken Markierung (in diesem Fall 1) hinzufügen müssen und die Endposition des Slice nicht berücksichtigt wird. Das ist genau das, was Sie brauchen.
+        </p>
+        <pre class="brush: javascript">
+line.slice(start + 1, end);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Wie sollte also meine endgültige Lösung aussehen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen nur Ihren Code in einen Funktionsausdruck einpacken und die erhaltene Teilzeichenkette zurückgeben. 
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+
+    let start = line.indexOf(left);
+    let end =  line.indexOf(right);
+    
+    return line.slice(start + 1, end);
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Zeigen Sie mir mehr Lösungen!<br />
+        denn ich will ein echter 🥇 Javascript-Held sein!</p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnappen Sie es sich!</p>
+        <p>
+             Sie teilen die Zeile zweimal auf - durch die linke Markierung (und nehmen die zweite Hälfte), dann durch die rechte Markierung (und nehmen die erste Hälfte). Außerdem wird in dieser Lösung eine anonyme Funktion verwendet.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var betweenMarkers = (s: string, l: string, r: string): string =>
+s.split(l)[1].split(r)[0];
+        </pre>
+        </div>
+        <p>
+            Diese Lösung verwendet einen regulären Ausdruck, um ein bestimmtes Muster in der Zeile zu finden, sowie den ternären Operator.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function betweenMarkers(line: string, left: string, right: string): string {
+    
+    let result = line.match(new RegExp(`\\${left}(.*?)\\${right}`));
+
+    return result? result[1]: '';
+}
+        </pre>
+        </div>
+        <p>Klicken Sie auf <b>Best Solutions</b> im Menü Mission und sehen Sie sich viele andere interessante Lösungen an!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Danke! Ich weiß und verstehe jetzt mehr! Alles funktioniert einwandfrei!</p>
+    </div>
+    <div class="answer">
+        👍 Freut mich zu hören!
+    </div>
+</div>
+</body>
