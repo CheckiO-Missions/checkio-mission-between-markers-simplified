@@ -1,0 +1,42 @@
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    Sie erhalten eine Zeichenkette und zwei Markierungen (die erste und die letzte). Sie müssen eine Teilzeichenkette finden, die zwischen diesen beiden Markierungen liegt. Aber es gibt ein paar wichtige Bedingungen.
+</p>
+
+<ul>
+	<li>Die Anfangs- und die Endmarkierung sind immer unterschiedlich.</li>
+	<li>Die Anfangs- und die Endmarkierung sind immer 1 Zeichen lang.</li>
+	<li>Die Anfangs- und Endmarkierungen befinden sich immer in einer Zeichenkette und folgen aufeinander.</li>
+</ul>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}between-markers.png" alt="example" style="max-height: 200px"/>
+</p>
+
+<p>
+   <strong>Eingabe:</strong> Drei Argumente. Alle sind Zeichenketten {% if is_js %}<span>(string)</span> {% else %} <span>(str)</span> {% endif %}. Das zweite und dritte Argument sind die Anfangs- und Endmarkierungen.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Eine Zeichenkette {% if is_js %}<span>(string)</span> {% else %} <span>(str)</span> {% endif %}. 
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wie es verwendet wird:</strong>
+    <i>Zum Parsen von Text.</i>
+</p>
+
+<p>
+    <strong>Vorbedingung:</strong>
+    <i>Es darf nicht mehr als eine End- und eine Anfangsmarkierung geben.</i>
+</p>
